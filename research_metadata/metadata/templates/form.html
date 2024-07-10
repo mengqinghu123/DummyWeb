@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Metadata</title>
+</head>
+<body>
+    <h2>Enter Metadata</h2>
+    <form method="post" action="{% url 'metadata_form' %}">
+        {% csrf_token %}
+        <label for="data_provider">Data Provider:</label>
+        <input type="text" id="data_provider" name="data_provider" required><br>
+
+        <label for="data_format">Data Format:</label>
+        <input type="text" id="data_format" name="data_format" required><br>
+
+        <label for="degree_of_aggregation">Degree of Aggregation:</label>
+        <input id="degree_of_aggregation" name="degree_of_aggregation" required></input><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
